@@ -1,0 +1,9 @@
+#!/bin/csh
+if (-e $PROTEUM14HOME/interface/proteum) then
+	$PROTEUM14HOME/interface/proteum
+else
+	echo "Tcl/Tk PROTEUM/IM interface not found in $PROTEU14MHOME/interface"
+	echo "Install it or run Proteum through the command line"
+endif
+
+

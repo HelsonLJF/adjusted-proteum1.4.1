@@ -1,0 +1,18 @@
+#!/bin/csh
+
+# Script para backup do proteumIM
+
+if ( ! (-d proteum1.4.1 )) exit
+
+cd proteum1.4.1
+date >BACKUP-DATE
+cd ..
+
+tar cvf proteum1.4.1.tar proteum1.4.1/*/*.[ch]
+tar uvf proteum1.4.1.tar proteum1.4.1/Makefile proteum1.4.1/BACKUP-DATE 
+tar uvf proteum1.4.1.tar proteum1.4.1/*/*/*.[ch]
+tar uvf proteum1.4.1.tar proteum1.4.1/*/bin/ccc proteum1.4.1/*/bin/clean proteum1.4.1/*/bin/proteu12cpp proteum1.4.1/*/bin/bac proteum1.4.1/*/bin/proteum  proteum1.4.1/*/bin/interface 
+
+gzip proteum1.4.1.tar
+mv proteum1.4.1.tar.gz pro141.tgz
+

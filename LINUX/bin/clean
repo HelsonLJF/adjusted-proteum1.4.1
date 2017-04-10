@@ -1,0 +1,9 @@
+# Escript de limpeza 
+
+cd ~/proteum1.4.1
+rm */obj/*
+
+cd LINUX/bin
+rm -f exemuta li li2nli muta muta-gen muta-view opmuta pteste report tcase tcase-add test-new headtail chanomat list-good recinput
+
+
